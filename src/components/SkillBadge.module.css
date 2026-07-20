@@ -1,0 +1,12 @@
+.badge {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  font-size: 0.8rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: var(--accent);
+  color: var(--panel)
+}
+

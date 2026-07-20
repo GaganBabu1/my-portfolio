@@ -6,7 +6,7 @@ const projects = [
         id:1,
         title:"Portfolio Website",
         description:"A personal portfolio website built using React to showcase my projects and skills.",
-        tech:"React, CSS",
+        tech:"React.js, CSS",
         language:"JavaScript"
     },
 

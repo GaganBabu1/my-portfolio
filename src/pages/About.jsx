@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from './About.module.css';
 
 function About() {
 
@@ -11,7 +12,7 @@ function About() {
   
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>About Me</h1>
       <p>MCA final-year student at K. S. Institute of Technology (CGPA 8.2) with hands-on experience in full-stack web development and 
         machine learning and strong hands-on skills in Java, Spring Boot, React, and MySQL. </p>

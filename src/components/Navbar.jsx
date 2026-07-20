@@ -1,19 +1,18 @@
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Navbar.module.css';
 
-function Navbar()
+function Navbar({ isDark, setIsDark })
 {
     const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <nav>
-            <h2>Gagan Babu</h2>
+        <nav className={styles.nav}>
+            <h1 className={styles.logo}><Link to = "/">Gagan Babu</Link></h1>
 
-            <button onClick = { ()=> setMenuOpen(!menuOpen) }>
-                {menuOpen ? 'Close Menu' : 'Open Menu'}
-            </button>
+            
 
             {menuOpen && (
-            <ul>
+            <ul className={styles.links}>
                 <li><Link to ="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to ="/skills">Skills</Link></li>
@@ -21,24 +20,23 @@ function Navbar()
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
             )}
+
+            <div className={styles.buttonGroup}>
+              <button onClick = { ()=> setMenuOpen(!menuOpen) }>
+                  {menuOpen ? 'Close Menu' : 'Open Menu'}
+              </button>
+
+              <button onClick={() => setIsDark(!isDark)}>
+                  {isDark ? "Light Mode" : "Dark Mode"}
+              </button>
+            </div>
+
+            
         </nav>
     );
+    
 }
 
 export default Navbar;
 
 
-/*
-buton onclick = function clicking()
-{
-    setMenuOpen(!menuOpen);
-    if(menuOpen)
-    {
-        button.innerHTML = 'Close Menu';
-        
-    }
-    else    {
-        button.innerHTML = 'Open Menu';
-    }
-}
-*/ 
