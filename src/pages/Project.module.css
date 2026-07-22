@@ -1,0 +1,153 @@
+.container {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+}
+
+.heroCard,
+.tabsCard,
+.projectsSection {
+  border: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.heroCard {
+  padding: 28px 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.eyebrow,
+.sectionLabel {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  max-width: 14ch;
+}
+
+.description {
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.tabsCard {
+  padding: 20px 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tabButton {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.tabButton:hover {
+  transform: translateY(-2px);
+  background: var(--cream);
+}
+
+.active {
+  background: var(--accent);
+  color: var(--panel);
+  border-color: var(--accent);
+}
+
+.projectsSection {
+  padding: 22px 20px;
+}
+
+.projectsHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.projectsGrid :global(.project-card) {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.35);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  min-height: 100%;
+}
+
+.projectsGrid :global(.project-card h3) {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.projectsGrid :global(.project-card p) {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.projectsGrid :global(.project-card p:nth-of-type(2)),
+.projectsGrid :global(.project-card p:nth-of-type(3)) {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .heroCard,
+  .tabsCard,
+  .projectsSection {
+    padding: 18px 16px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabButton {
+    width: 100%;
+  }
+}
