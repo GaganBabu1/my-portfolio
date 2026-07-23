@@ -6,17 +6,20 @@ const projectGroups = {
     java: [
         {
             id: "java-1",
-            title: "E-commerce Platform",
-            description: "An e-commerce platform developed with Spring Boot and React, featuring user authentication and product management.",
-            tech: "Spring Boot, React, MySQL",
-            language: "Java"
+            title: "Banking Management System",
+            description: "Full-stack banking application with account management, deposits, withdrawals, and fund transfers. Built with Spring Boot REST APIs, JPA/Hibernate ORM, and a React frontend with concurrent-safe transaction validation.",
+            tech: "Spring Boot, React, MySQL, JPA/Hibernate, GitHub Actions",
+            language: "Java",
+            github: "https://github.com/GaganBabu1/Bank"
         },
         {
             id: "java-2",
-            title: "Task Management API",
-            description: "A backend service for creating and tracking tasks with REST endpoints, validation, and layered architecture.",
-            tech: "Spring Boot, JPA, MySQL",
-            language: "Java"
+            title: "Journal App",
+            description: "Secure full-stack journal application with JWT authentication, BCrypt encryption, and role-based access control. Auto-deploys to AWS EC2 via GitHub Actions CI/CD pipeline with Docker containerization.",
+            tech: "Spring Boot, MongoDB, React, Docker, AWS",
+            language: "Java",
+            liveDemo: "https://journal-app-gold-chi.vercel.app/",
+            github: "https://github.com/GaganBabu1/journal-app"
         },
         // Add more Java Spring Boot projects here.
         // { id: "java-3", title: "Project Name", description: "Short description.", tech: "Spring Boot, ...", language: "Java" },
@@ -24,17 +27,19 @@ const projectGroups = {
     mern: [
         {
             id: "mern-1",
-            title: "Portfolio Website",
-            description: "A personal portfolio website built using React to showcase my projects and skills.",
-            tech: "React.js, CSS",
-            language: "JavaScript"
+            title: "Eco Route",
+            description: "Full-stack MERN web application providing eco-friendly route recommendations by integrating real-time air quality data, EV charging station locations, and CO₂ impact metrics. Includes JWT authentication and dynamic dashboards.",
+            tech: "Node.js, Express, React, MongoDB, Tailwind CSS",
+            language: "MERN",
+            github: "https://github.com/GaganBabu1/eco-friendly-route-recommendation"
         },
         {
             id: "mern-2",
-            title: "Chat Application",
-            description: "A real-time chat application built using Node.js and Socket.io, allowing users to communicate in chat rooms.",
-            tech: "Node.js, Socket.io, Express",
-            language: "JavaScript"
+            title: "Ayur Health Hub",
+            description: "Full-stack Ayurvedic healthcare application with patient management, consultation booking, dynamic symptom-disease mapping, and real-time health score tracking. Features role-based admin controls and automated data seeding.",
+            tech: "Node.js, Express, React, MongoDB",
+            language: "MERN",
+            github: "https://github.com/GaganBabu1/ayur-health-hub"
         },
         // Add more MERN projects here.
         // { id: "mern-3", title: "Project Name", description: "Short description.", tech: "MongoDB, Express, React, Node.js", language: "JavaScript" },
@@ -55,9 +60,7 @@ function Project() {
             <section className={styles.heroCard}>
                 <p className={styles.eyebrow}>Projects</p>
                 <h1 className={styles.title}>Selected work across Java Spring Boot and MERN.</h1>
-                <p className={styles.description}>
-                    Choose a stack to switch between backend-focused Java projects and MERN builds. The code is set up so new projects can be added directly inside each group.
-                </p>
+        
             </section>
 
             <section className={styles.tabsCard}>
@@ -82,7 +85,7 @@ function Project() {
 
             <section className={styles.projectsSection}>
                 <div className={styles.projectsHeader}>
-                    <p className={styles.sectionLabel}>Showing</p>
+                    {/*<p className={styles.sectionLabel}>Showing</p>*/}
                     <h2 className={styles.sectionTitle}>
                         {selectedGroup === "java" ? "Java Spring Boot projects" : "MERN projects"}
                     </h2>
@@ -96,6 +99,8 @@ function Project() {
                             description={project.description}
                             tech={project.tech}
                             language={project.language}
+                            github={project.github}   
+                            liveDemo={project.liveDemo}
                         />
                     ))}
                 </div>
