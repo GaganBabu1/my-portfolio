@@ -1,30 +1,23 @@
 import {useEffect,useState} from "react";
+import {ValidationError,useForm} from "@formspree/react";
+
 function Contact()
 {
+    const [state,handleSubmit] = useForm("mpqvyawj");
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [message,setMessage] = useState('');
-    const [submitted,setSubmitted] = useState(false);
+
     useEffect(()=>{
         document.title = "Contact | Gagan Babu Portfolio";
     }, []);
 
-    function handleSubmit()
-    {
-        if(name == '' || email == '' || message == '')
-        {
-            alert('Please fill in all fields.');
-            return;
-        }
-        setSubmitted(true);
-    }
-
-    if(submitted)
+    if(state.succeeded)
     {
         return (
         <div>
             <h1>Thank you, {name}</h1>
-            <p>I'll get back to you at {email} soon.</p>
+            <p>Your message was sent successfully. I’ll reply at {email} soon.</p>
         </div>
     );
     }
@@ -34,31 +27,52 @@ function Contact()
             <h1>Contact Me</h1>
 
             <div>
-                <label>Name:</label>
-                <input
-                    type ="text"
-                    value = {name}
-                    onChange = {(e)=>setName(e.target.value)}
-                    placeholder = "Your Name"/>
+                <p>Email: <a href="mailto:gaganbabu1203@gmail.com">gaganbabu1203@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/gagan-babu-7a982b2b1" target="_blank" rel="noreferrer">linkedin.com/in/gagan-babu-7a982b2b1</a></p>
+                <p>GitHub: <a href="https://github.com/GaganBabu1" target="_blank" rel="noreferrer">github.com/GaganBabu1</a></p>
             </div>
 
-            <div>
-                <label>Email</label>
-                <input
-                    type="email"
-                    value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
-                    placeholder="Your Email"/>
-            </div>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        value={name}
+                        onChange={(e)=>setName(e.target.value)}
+                        placeholder="Your Name"/>
+                </div>
 
-            <div>
-                <label>Message</label>
-                <textarea
-                    value={message}
-                    onChange={(e)=>setMessage(e.target.value)}
-                    placeholder="Your Message"/>
-            </div>
-            <button onClick={handleSubmit}>Submit</button>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={email}
+                        onChange={(e)=>setEmail(e.target.value)}
+                        placeholder="Your Email"/>
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                </div>
+
+                <div>
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        value={message}
+                        onChange={(e)=>setMessage(e.target.value)}
+                        placeholder="Your Message"/>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                </div>
+
+                <ValidationError errors={state.errors} />
+
+                <button type="submit" disabled={state.submitting}>
+                    {state.submitting ? 'Sending...' : 'Submit'}
+                </button>
+            </form>
         </div>
     );
 

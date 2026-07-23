@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import styles from './About.module.css';
 
 const skills = [
@@ -14,7 +14,7 @@ const skills = [
 
 const timeline = [
   {
-    year: "2025 - Present",
+    year: "2025 - July 2026",
     title: "MCA Final Year",
     org: "K. S. Institute of Technology, Bengaluru",
     body: "Focused on full-stack development, system design, and building product-ready web applications.",
@@ -35,11 +35,11 @@ const timeline = [
 
 function About() {
 
-  const [read,setRead] = useState(false);
+ /* const [read,setRead] = useState(false);
 
   useEffect(() => {
     document.title = "About | Gagan's Portfolio";
-  }, []);
+  }, []);*/
 
   
 
@@ -50,7 +50,10 @@ function About() {
           <p className={styles.eyebrow}>About</p>
           <h1 className={styles.title}>Building clean, practical web products with Java and MERN.</h1>
           <p className={styles.intro}>
-            I'm Gagan, an MCA final-year student at K. S. Institute of Technology (CGPA 8.2) with hands-on experience shipping full-stack applications to production. I enjoy turning ideas into dependable interfaces, APIs, and deployed systems.
+            I'm Gagan, an MCA final-year student at K. S. Institute of Technology (CGPA 8.75) with hands-on experience shipping full-stack applications to production. I enjoy turning ideas into dependable interfaces, APIs, and deployed systems.
+             I have built full-stack applications with real-world constraints in mind, from API design to frontend structure and
+              deployment. I'm currently working on expanding my knowledge in AI integration by buliding a poker game application. I’m especially interested in roles where I can contribute across the stack and keep improving through
+              hands-on product work.
           </p>
           <p className={styles.introSecondary}>
             My work spans Java, Spring Boot, React, Node.js, MongoDB, Docker, and AWS. I care about simple flows, maintainable code, and software that feels polished from first click.
@@ -74,9 +77,9 @@ function About() {
             >
                Resume (MERN Stack)
             </a>
-            <button className={styles.secondaryButton} onClick={() => setRead(!read)}>
+            {/*<button className={styles.secondaryButton} onClick={() => setRead(!read)}>
               {read ? "Show less" : "Read more"}
-            </button>
+            </button>*/}
           </div>
         </div>
 
@@ -106,7 +109,7 @@ function About() {
         </div>
       </section>
 
-      {read && (
+      {/*{read && (
         <section className={styles.panel}>
           <p className={styles.kicker}>More about me</p>
           <p className={styles.panelCopy}>
@@ -115,7 +118,7 @@ function About() {
             hands-on product work.
           </p>
         </section>
-      )}
+      )}*/}
 
       <section className={styles.skillsCard}>
         <div className={styles.sectionHeader}>
@@ -134,7 +137,7 @@ function About() {
 
       <section className={styles.timelineCard}>
         <div className={styles.sectionHeader}>
-          <p className={styles.kicker}>Timeline</p>
+          {/*<p className={styles.kicker}>Timeline</p>*/}
           <h2 className={styles.sectionTitle}>Experience and education</h2>
         </div>
         <div className={styles.timeline}>

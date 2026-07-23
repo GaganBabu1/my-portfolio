@@ -87,9 +87,13 @@
   color: var(--panel);
 }
 
-.secondaryButton,
-.linkButton {
+.secondaryButton
+ {
   background: var(--panel);
+}
+
+.linkButton{
+  background: var(--accent);
 }
 
 .profileCard {
@@ -265,6 +269,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  
 }
 
 .panelCopy {

@@ -50,7 +50,7 @@ function Skills() {
         <div className={styles.container}>
             {/* Hero Section */}
             <section className={styles.heroCard}>
-                <p className={styles.eyebrow}>Expertise</p>
+                {/*<p className={styles.eyebrow}>Expertise</p>*/}
                 <h1 className={styles.title}>Full-stack capabilities across modern web tech.</h1>
                 {/*<p className={styles.description}>
                     Proficient in Java, Spring Boot, React, Node.js, and cloud technologies. I build scalable backends, responsive frontends, and deploy production-ready applications.
