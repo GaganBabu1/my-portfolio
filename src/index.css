@@ -7,6 +7,10 @@
   --accent: #3b4836;
   --accent-deep: #2a3327;
   --border: #1a1a1a;
+  --surface: rgba(244, 241, 234, 0.72);
+  --surface-strong: linear-gradient(180deg, rgba(244, 241, 234, 0.98), rgba(235, 231, 223, 0.98));
+  --field-bg: rgba(255, 255, 255, 0.5);
+  --inner-border: rgba(26, 26, 26, 0.12);
   --display: 'Playfair Display', 'Georgia', serif;
   --mono: 'IBM Plex Mono', 'SFMono-Regular', monospace;
 
@@ -35,11 +39,15 @@ body {
 
 body[data-theme='dark'] {
   --cream: #181716;
-  --panel: #1f1e1c;
-  --ink: #eae7e1;
-  --accent: #7a8b6e;
-  --accent-deep: #5f7151;
+  --panel: #22211F;
+  --ink: #EAE7E1;
+  --accent: #7A8B6E;
+  --accent-deep: #647058;
   --border: #363430;
+  --surface: #22211F;
+  --surface-strong: linear-gradient(180deg, #22211F, #181716);
+  --field-bg: #1F1E1C;
+  --inner-border: rgba(234, 231, 225, 0.12);
 }
 
 body[data-theme='light'] {
@@ -49,6 +57,10 @@ body[data-theme='light'] {
   --accent: #3b4836;
   --accent-deep: #2a3327;
   --border: #1a1a1a;
+  --surface: rgba(244, 241, 234, 0.72);
+  --surface-strong: linear-gradient(180deg, rgba(244, 241, 234, 0.98), rgba(235, 231, 223, 0.98));
+  --field-bg: rgba(255, 255, 255, 0.5);
+  --inner-border: rgba(26, 26, 26, 0.12);
 }
 
 #root {

@@ -1,0 +1,196 @@
+.pageShell {
+  padding: 24px;
+}
+
+.heroCard,
+.successCard {
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(circle at top right, rgba(59, 72, 54, 0.12), transparent 34%),
+    var(--surface-strong);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.heroCard {
+  padding: 28px;
+}
+
+.successCard {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 34px 30px;
+}
+
+.eyebrow,
+.sectionLabel {
+  margin: 0 0 14px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(2.35rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  max-width: 12ch;
+}
+
+.lead {
+  max-width: 60ch;
+  margin: 16px 0 0;
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.layout {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.2fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.infoCard,
+.formCard {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+}
+
+.infoCard {
+  padding: 22px;
+  display: grid;
+  gap: 18px;
+  position: sticky;
+  top: 24px;
+}
+
+.formCard {
+  padding: 22px;
+}
+
+.linkGroup {
+  display: grid;
+  gap: 6px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--inner-border);
+}
+
+.linkGroup:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.linkLabel,
+.label {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contactLink,
+.primaryLink {
+  color: inherit;
+}
+
+.contactLink {
+  width: fit-content;
+  font-family: var(--display);
+  font-size: 1.02rem;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.noteBox {
+  padding: 14px 16px;
+  border: 1px solid var(--inner-border);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  line-height: 1.6;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--field-bg);
+  color: var(--ink);
+  padding: 14px 15px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 72, 54, 0.15);
+}
+
+.textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.button,
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: fit-content;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  background: var(--accent);
+  color: var(--panel);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.75;
+  cursor: progress;
+}
+
+.successText {
+  max-width: 52ch;
+  margin: 14px 0 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 860px) {
+  .pageShell {
+    padding: 16px;
+  }
+
+  .heroCard,
+  .successCard {
+    padding: 20px 16px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    position: static;
+  }
+}
