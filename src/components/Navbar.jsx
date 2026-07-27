@@ -1,5 +1,7 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark, faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
 import styles from './Navbar.module.css';
 
 function Navbar({ isDark, setIsDark })
@@ -23,11 +25,17 @@ function Navbar({ isDark, setIsDark })
 
             <div className={styles.buttonGroup}>
               <button onClick = { ()=> setMenuOpen(!menuOpen) }>
-                  {menuOpen ? 'Close Menu' : 'Open Menu'}
+                  <FontAwesomeIcon
+                      icon={menuOpen ? faXmark : faBars}
+                      style={{ color: 'rgb(122, 139, 110)' }}
+                  />
               </button>
 
               <button onClick={() => setIsDark(!isDark)}>
-                  {isDark ? "Light Mode" : "Dark Mode"}
+                  <FontAwesomeIcon
+                      icon={isDark ? faSun : faMoon}
+                      style={{ color: 'rgb(122, 139, 110)' }}
+                  />
               </button>
             </div>
 

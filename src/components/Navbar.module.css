@@ -32,6 +32,7 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   cursor: pointer;
+  color: inherit;
 }
 
 .links {
