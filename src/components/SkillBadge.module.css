@@ -1,13 +1,30 @@
 .badge {
-  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 12px;
   border: 1px solid var(--border);
-  background: var(--cream);
+  background: var(--accent);
+  color: var(--panel);
   font-size: 0.8rem;
   font-family: var(--mono);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  background: var(--accent);
-  color: var(--panel);
-  
+  box-sizing: border-box;
+}
+
+.badge span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge img {
+  display: block;
+  width: 80px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(1.05);
 }
 

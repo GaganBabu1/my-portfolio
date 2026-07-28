@@ -1,11 +1,11 @@
+import { isValidElement } from "react";
 import styles from './SkillBadge.module.css';
 
-function SkillBadge({skill})
-{
-    return(
+function SkillBadge({ skill }) {
+    return (
         <div className={styles.badge}>
-            <span>{skill}</span>
-        </div>    
+            {isValidElement(skill) ? skill : <span>{skill}</span>}
+        </div>
     );
 }
 

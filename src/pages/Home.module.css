@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: 1.35fr 0.8fr;
+  grid-template-columns: 1.35fr 0.8fr ;
   gap: 20px;
   padding: 24px;
 }
@@ -42,8 +42,11 @@
 }
 
 .skillsCard {
+  grid-column: 1 / -1;
+  width: 100%;
   padding: 22px 20px;
   min-height: 180px;
+  box-sizing: border-box;
 }
 
 .eyebrow,
@@ -111,11 +114,10 @@
 
 
 .skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
   gap: 10px;
   margin-top: 16px;
-  
 }
 
 
