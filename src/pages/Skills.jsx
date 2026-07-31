@@ -2,36 +2,90 @@ import { useEffect, useState } from "react";
 import SkillBadge from "../components/SkillBadge";
 import styles from "./Skills.module.css";
 
+const skillLogo = (fileName) => `/programming_languages_logos/${encodeURIComponent(fileName)}`;
+
+const createSkill = (label, fileName) => ({
+    label,
+    node: (
+        <span className={styles.skillContent}>
+            <img className={styles.skillIcon} src={skillLogo(fileName)} alt={`${label} logo`} loading="lazy" />
+            <span className={styles.skillLabel}>{label}</span>
+        </span>
+    ),
+});
+
+const vercelMark = (
+    <svg className={styles.skillIcon} viewBox="0 0 128 128" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M64 20 112 104H16L64 20Z" />
+    </svg>
+);
+
 const skillCategories = [
     {
         id: 1,
         category: "Languages",
-        skills: ["Java", "Javascript", "Python", "SQL", "NoSQL"]
+        skills: [
+            createSkill("Java", "Java.png"),
+            createSkill("Javascript", "javascript.png"),
+            createSkill("Python", "python.png"),
+            createSkill("SQL", "sql.png"),
+            createSkill("NoSQL", "nosql.webp"),
+        ]
     },
     {
         id: 2,
         category: "Frameworks",
-        skills: ["React", "Spring Boot", "Hibernate/JPA", "Node.js"]
+        skills: [
+            createSkill("React", "react.png"),
+            createSkill("Spring Boot", "springboot.png"),
+            createSkill("Hibernate/JPA", "Hibernate Jpa.png"),
+            createSkill("Node.js", "node.js.png"),
+        ]
     },
     {
         id: 3,
         category: "Web & APIs",
-        skills: ["Rest APIs", "HTML", "CSS"]
+        skills: [
+            createSkill("Rest APIs", "restapis.png"),
+            createSkill("HTML", "html5.png"),
+            createSkill("CSS", "css5.png"),
+        ]
     },
     {
         id: 4,
         category: "Databases",
-        skills: ["MySQL", "MongoDB"]
+        skills: [
+            createSkill("MySQL", "mysql.png"),
+            createSkill("MongoDB", "MongoDB.webp"),
+        ]
     },
     {
         id: 5,
         category: "Tools & Platforms",
-        skills: ["Git", "GitHub", "Ci/CD", "Postman", "Maven"]
+        skills: [
+            createSkill("Git", "git.png"),
+            createSkill("GitHub", "github.png"),
+            createSkill("Ci/CD", "cicd.png"),
+            createSkill("Postman", "postman.png"),
+            createSkill("Maven", "maven.jpg"),
+        ]
     },
     {
         id: 6,
         category: "Cloud & Devops",
-        skills: ["Docker", "AWS", "Vercel"]
+        skills: [
+            createSkill("Docker", "docker.png"),
+            createSkill("AWS", "aws.webp"),
+            {
+                label: "Vercel",
+                node: (
+                    <span className={styles.skillContent}>
+                        {vercelMark}
+                        <span className={styles.skillLabel}>Vercel</span>
+                    </span>
+                ),
+            },
+        ]
     }
 ];
 
@@ -77,7 +131,7 @@ function Skills() {
             <div className={styles.skillsGridWrapper}>
                 <div className={styles.skillsGrid}>
                     {activeCategory && activeCategory.skills.map((skill) => (
-                        <SkillBadge key={skill} skill={skill} />
+                        <SkillBadge key={skill.label} skill={skill.node} />
                     ))}
                 </div>
             </div>

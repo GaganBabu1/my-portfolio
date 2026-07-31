@@ -6,13 +6,13 @@
   padding: 8px 12px;
   border: 1px solid #27272A;
   background: #18181B;
-  color: var(--panel);
+  color: var(--ink);
   font-size: 0.8rem;
   font-family: var(--mono);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   box-sizing: border-box;
-  width: 150px;
+  width: 225px;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 

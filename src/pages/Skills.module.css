@@ -93,8 +93,8 @@
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
   padding: 20px 24px;
   border: 1px solid var(--border);
   background: var(--panel);
@@ -115,6 +115,25 @@
 
 .skillsGridWrapper {
   position: relative;
+}
+
+.skillContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skillIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.skillLabel {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.1;
 }
 
 /* Responsive design */

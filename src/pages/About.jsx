@@ -1,16 +1,7 @@
 //import { useEffect, useState } from "react";
 import styles from './About.module.css';
 
-const skills = [
-  { name: "Java", tone: "java", mark: "J" },
-  { name: "Spring Boot", tone: "spring", mark: "SB" },
-  { name: "React", tone: "react", mark: "R" },
-  { name: "Node.js", tone: "node", mark: "N" },
-  { name: "MongoDB", tone: "mongo", mark: "M" },
-  { name: "Docker", tone: "docker", mark: "D" },
-  { name: "AWS", tone: "aws", mark: "A" },
-  { name: "Git", tone: "git", mark: "G" },
-];
+
 
 const timeline = [
   {
@@ -120,20 +111,7 @@ function About() {
         </section>
       )}*/}
 
-      <section className={styles.skillsCard}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.kicker}>Skills</p>
-          <h2 className={styles.sectionTitle}>Tech stack</h2>
-        </div>
-        <div className={styles.skillsGrid}>
-          {skills.map((skill) => (
-            <div key={skill.name} className={styles.skillBadge}>
-              <span className={`${styles.skillMark} ${styles[skill.tone]}`}>{skill.mark}</span>
-              <span className={styles.skillName}>{skill.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
+      
 
       <section className={styles.timelineCard}>
         <div className={styles.sectionHeader}>
