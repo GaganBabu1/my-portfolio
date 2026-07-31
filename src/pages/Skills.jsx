@@ -131,7 +131,7 @@ function Skills() {
             <div className={styles.skillsGridWrapper}>
                 <div className={styles.skillsGrid}>
                     {activeCategory && activeCategory.skills.map((skill) => (
-                        <SkillBadge key={skill.label} skill={skill.node} />
+                        <SkillBadge key={skill.label} skill={skill.node} className={styles.skillPageBadge} />
                     ))}
                 </div>
             </div>

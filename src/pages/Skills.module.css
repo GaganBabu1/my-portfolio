@@ -117,6 +117,11 @@
   position: relative;
 }
 
+.skillPageBadge {
+  width: 100%;
+  max-width: 100%;
+}
+
 .skillContent {
   display: inline-flex;
   align-items: center;

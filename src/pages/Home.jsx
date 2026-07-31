@@ -126,8 +126,8 @@ function Home() {
             <section className={styles.skillsCard}>
                 <p className={styles.kicker}>Core tools</p>
                 <div className={styles.skillsContainer}>
-                    {skills.map((skill) => (
-                        <SkillBadge key={skill} skill={skill} />
+                    {skills.map((skill, index) => (
+                        <SkillBadge key={`home-skill-${index}`} skill={skill} className={styles.homeSkillBadge} />
                     ))}
                 </div>
             </section>
