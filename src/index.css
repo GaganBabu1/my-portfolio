@@ -38,16 +38,17 @@ body {
 }
 
 body[data-theme='dark'] {
-  --cream: #181716;
-  --panel: #22211F;
-  --ink: #EAE7E1;
-  --accent: #7A8B6E;
-  --accent-deep: #647058;
-  --border: #363430;
-  --surface: #22211F;
-  --surface-strong: linear-gradient(180deg, #22211F, #181716);
-  --field-bg: #1F1E1C;
-  --inner-border: rgba(234, 231, 225, 0.12);
+  /* Modern Slate palette (background / text / primary) */
+  --cream: #0B0F12; /* page background */
+  --panel: #0F1417; /* cards / panels */
+  --ink: #E6F0F2; /* main text */
+  --accent: #1F8CA6; /* primary CTA / highlights */
+  --accent-deep: #166F83; /* deeper accent for borders */
+  --border: #1B2326; /* subtle borders */
+  --surface: #0F1417;
+  --surface-strong: linear-gradient(180deg, #0F1417, #0B0F12);
+  --field-bg: #0D1113; /* form fields */
+  --inner-border: rgba(230, 240, 242, 0.08);
 }
 
 body[data-theme='light'] {

@@ -1,18 +1,19 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 44px;
+  justify-content: flex-start;
+  gap: 12px;
+  min-height: 75px;
   padding: 8px 12px;
   border: 1px solid #27272A;
   background: #18181B;
   color: var(--ink);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: var(--mono);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  text-transform: none; /* keep skill label readable */
+  letter-spacing: 0.02em;
   box-sizing: border-box;
-  width: 225px;
+  width: 100%;
   transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -22,17 +23,27 @@
   transform: translateY(-1px);
 }
 
-.badge span {
+/* Icon + label wrapper inside the badge */
+.badge > span {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
 }
 
-.badge img {
+.badge img,
+.badge svg {
   display: block;
-  width: 80px;
-  height: 50px;
+  width: 160px;
+  height: 80px;
+  flex: 0 0 40px;
   object-fit: contain;
-  filter: brightness(1.05);
+  filter: brightness(1.02);
+}
+
+/* Ensure inline SVGs scale and center consistently */
+.badge svg {
+  vertical-align: middle;
 }
 
