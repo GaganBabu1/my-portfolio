@@ -66,20 +66,28 @@
   margin-bottom: 12px;
 }
 
-.heroP {
-  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+.heroP{
   font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin: 0;
   font-weight: bold;
-  line-height: 1.25;
-  max-width: 58ch;
-  margin-bottom: 16px;
 }
 
-.lead {
-  max-width: 58ch;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 24px;
+.heroCard,
+.sideCard,
+.panel,
+.skillsCard {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.heroCard:hover,
+.sideCard:hover,
+.panel:hover {
+  background: var(--surface);
+  border-color: var(--inner-border);
 }
 
 .actions {
@@ -138,7 +146,7 @@
   justify-content: center;
 }
 
-/* Make icons and labels inside home badges larger and centered */
+
 .homeSkillBadge > span {
   display: inline-flex;
   align-items: center;
@@ -153,6 +161,82 @@
   height: 56px;
   flex: 0 0 56px;
   object-fit: contain;
+}
+
+/* Light-mode only: make Home page match About page light styling */
+body[data-theme='light'] .heroCard,
+body[data-theme='light'] .panel,
+body[data-theme='light'] .skillsCard,
+body[data-theme='light'] .timelineCard,
+body[data-theme='light'] .linksCard {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+body[data-theme='light'] .sideCard {
+  background: var(--accent);
+  color: var(--panel);
+}
+
+body[data-theme='light'] .heroCard,
+body[data-theme='light'] .panel,
+body[data-theme='light'] .skillsCard,
+body[data-theme='light'] .sideCard {
+  color: var(--ink);
+}
+
+body[data-theme='light'] .sideCard {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+body[data-theme='light'] .primaryLink {
+  background: var(--accent);
+  color: var(--panel);
+}
+
+body[data-theme='light'] .secondaryLink {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+body[data-theme='light'] .meta,
+body[data-theme='light'] .panelCopy,
+body[data-theme='light'] .eyebrow,
+body[data-theme='light'] .kicker {
+  color: var(--ink);
+}
+
+/* Home-specific badges and text */
+body[data-theme='light'] .homeSkillBadge {
+  background: #1E293B;
+  color: var(--cream);
+  border: 1px solid var(--border);
+}
+
+body[data-theme='light'] .homeSkillBadge:hover {
+  background: #273447;
+  border-color: var(--inner-border);
+}
+
+body[data-theme='light'] .homeSkillBadge > span {
+  background: transparent;
+  color: inherit;
+  border: 0;
+}
+
+body[data-theme='light'] .homeSkillBadge img,
+body[data-theme='light'] .homeSkillBadge svg {
+  filter: brightness(1.02);
+}
+
+body[data-theme='light'] .eyebrow,
+body[data-theme='light'] .kicker,
+body[data-theme='light'] .meta,
+body[data-theme='light'] .panelCopy,
+body[data-theme='light'] .lead {
+  color: var(--ink);
 }
 
 @media (max-width: 860px) {

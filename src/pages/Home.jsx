@@ -194,6 +194,8 @@ const skills = [
     </svg>,
     
     <img src="/programming_languages_logos/maven.png" alt="Maven" />,
+
+    <img src="/programming_languages_logos/Vercel.png" alt="Vercel" />
           
 ];
 

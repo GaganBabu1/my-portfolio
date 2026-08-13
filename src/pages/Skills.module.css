@@ -124,7 +124,7 @@
   padding: 6px 10px;
 }
 
-/* Ensure labels align next to icons inside page badges */
+
 .skillPageBadge > span {
   display: inline-flex;
   align-items: center;

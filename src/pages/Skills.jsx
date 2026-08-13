@@ -14,11 +14,8 @@ const createSkill = (label, fileName) => ({
     ),
 });
 
-const vercelMark = (
-    <svg className={styles.skillIcon} viewBox="0 0 128 128" aria-hidden="true" focusable="false">
-        <path fill="currentColor" d="M64 20 112 104H16L64 20Z" />
-    </svg>
-);
+
+
 
 // Reuse the exact SVG nodes from Home core skills where Home uses inline SVGs
 const homeReactIcon = (
@@ -382,15 +379,7 @@ const skillCategories = [
                     </span>
                 )
             },
-            {
-                label: "Vercel",
-                node: (
-                    <span className={styles.skillContent}>
-                        {vercelMark}
-                        <span className={styles.skillLabel}>Vercel</span>
-                    </span>
-                ),
-            },
+            createSkill("Vercel", "Vercel.png")
         ]
     }
 ];

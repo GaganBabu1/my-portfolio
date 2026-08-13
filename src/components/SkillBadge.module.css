@@ -5,12 +5,12 @@
   gap: 12px;
   min-height: 75px;
   padding: 8px 12px;
-  border: 1px solid #27272A;
-  background: #18181B;
-  color: var(--ink);
+  border: 1px solid var(--border);
+  background: #1E293B;
+  color: #FFFFFF;
   font-size: 0.9rem;
   font-family: var(--mono);
-  text-transform: none; /* keep skill label readable */
+  text-transform: none; 
   letter-spacing: 0.02em;
   box-sizing: border-box;
   width: 100%;
@@ -18,8 +18,8 @@
 }
 
 .badge:hover {
-  background: #27272A;
-  border-color: #52525B;
+  background: #1E293B;
+  border-color: var(--inner-border);
   transform: translateY(-1px);
 }
 

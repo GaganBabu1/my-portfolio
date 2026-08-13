@@ -52,16 +52,28 @@ body[data-theme='dark'] {
 }
 
 body[data-theme='light'] {
-  --cream: #ebe7df;
-  --panel: #efe9de;
+  --cream: #e2e6ea;
+  --panel: #dce1e6;
   --ink: #1a1a1a;
-  --accent: #3b4836;
-  --accent-deep: #2a3327;
-  --border: #1a1a1a;
-  --surface: rgba(244, 241, 234, 0.72);
-  --surface-strong: linear-gradient(180deg, rgba(244, 241, 234, 0.98), rgba(235, 231, 223, 0.98));
-  --field-bg: rgba(255, 255, 255, 0.5);
-  --inner-border: rgba(26, 26, 26, 0.12);
+  --accent: #4a5a66;
+  --accent-deep: #34414a;
+  --border: #c4ccd4;
+  --surface: rgba(220, 225, 230, 0.82);
+  --surface-strong: linear-gradient(180deg, rgba(232, 236, 240, 0.98), rgba(220, 225, 230, 0.98));
+  --field-bg: rgba(255, 255, 255, 0.62);
+  --inner-border: rgba(26, 26, 26, 0.10);
+
+  /* Skill badge / component colors for light mode (can be adjusted later)
+     These variables only exist for light theme so dark theme stays unchanged. */
+  --skill-java: #f0c9a8;
+  --skill-spring: #d8ebc8;
+  --skill-react: #d9eff3;
+  --skill-node: #d7e9d8;
+  --skill-mongo: #dbead3;
+  --skill-docker: #d7e4f5;
+  --skill-aws: #f2ddb0;
+  --skill-git: #f0d0c7;
+  --skill-badge-text: var(--ink);
 }
 
 #root {

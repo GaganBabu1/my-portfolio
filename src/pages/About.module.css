@@ -94,6 +94,7 @@
 
 .linkButton{
   background: var(--accent);
+  color:#FFFFFF;
 }
 
 .profileCard {
@@ -188,37 +189,19 @@
   font-size: 1rem;
 }
 
-.java {
-  background: #f0c9a8;
-}
 
-.spring {
-  background: #d8ebc8;
-}
 
-.react {
-  background: #d9eff3;
-}
-
-.node {
-  background: #d7e9d8;
-}
-
-.mongo {
-  background: #dbead3;
-}
-
-.docker {
-  background: #d7e4f5;
-}
-
-.aws {
-  background: #f2ddb0;
-}
-
-.git {
-  background: #f0d0c7;
-}
+/* Light-mode only overrides: use CSS variables so we can tweak light theme
+   without changing dark mode. These selectors only apply when
+   `body[data-theme='light']` is set. */
+body[data-theme='light'] .java { background: var(--skill-java); color: var(--skill-badge-text); }
+body[data-theme='light'] .spring { background: var(--skill-spring); color: var(--skill-badge-text); }
+body[data-theme='light'] .react { background: var(--skill-react); color: var(--skill-badge-text); }
+body[data-theme='light'] .node { background: var(--skill-node); color: var(--skill-badge-text); }
+body[data-theme='light'] .mongo { background: var(--skill-mongo); color: var(--skill-badge-text); }
+body[data-theme='light'] .docker { background: var(--skill-docker); color: var(--skill-badge-text); }
+body[data-theme='light'] .aws { background: var(--skill-aws); color: var(--skill-badge-text); }
+body[data-theme='light'] .git { background: var(--skill-git); color: var(--skill-badge-text); }
 
 .timeline {
   display: grid;
