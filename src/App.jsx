@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom'
 import { useEffect, useState } from 'react'
-
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -26,7 +26,9 @@ function App() {
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Analytics />
     </div>
+    
   );
 }
 
