@@ -41,7 +41,7 @@ function About() {
           <p className={styles.eyebrow}>About</p>
           <h1 className={styles.title}>Building clean, practical web products with Java and MERN.</h1>
           <p className={styles.intro}>
-            I'm Gagan, an MCA final-year student at K. S. Institute of Technology (CGPA 8.75) with hands-on experience shipping full-stack applications to production. I enjoy turning ideas into dependable interfaces, APIs, and deployed systems.
+            I'm Gagan, an MCA Graduate from  K. S. Institute of Technology (CGPA 8.75) with hands-on experience shipping full-stack applications to production. I enjoy turning ideas into dependable interfaces, APIs, and deployed systems.
              I have built full-stack applications with real-world constraints in mind, from API design to frontend structure and
               deployment. I'm currently working on expanding my knowledge in AI integration by buliding a poker game application. I’m especially interested in roles where I can contribute across the stack and keep improving through
               hands-on product work.

@@ -208,7 +208,7 @@ function Home() {
         <div className={styles.container}>
             <section className={styles.heroCard}>
                 <p className={styles.eyebrow}>Full Stack Developer | Java & MERN Stack </p>
-                <p className={styles.heroP}>Hi, I'm Gagan — a final-year MCA student at KSIT Bengaluru building full-stack web applications with Java/Spring Boot and the MERN stack. 
+                <p className={styles.heroP}>Hi, I'm Gagan Babu a MCA Graduate building full-stack web applications with Java/Spring Boot and the MERN stack. 
                     I've shipped production-ready apps with CI/CD pipelines, AWS deployment, and JWT-secured APIs. 
                     Currently exploring AI integration in web systems.</p>
                 <div className={styles.actions}>
