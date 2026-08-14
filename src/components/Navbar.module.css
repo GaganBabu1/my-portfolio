@@ -1,7 +1,7 @@
 .nav {
   display: flex;
-  justify-content:space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   padding: 18px 24px;
   border-bottom: 1px solid var(--border);
@@ -11,32 +11,20 @@
   z-index: 10;
 }
 
-.topRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  min-width: 0;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  position: relative;
-}
-
 .logo {
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 4.2vw, 1.8rem);
   font-weight: 700;
   font-family: var(--display);
   margin: 0;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo a {
+  display: block;
   text-decoration: none;
   color: inherit;
+  white-space: nowrap;
 }
 
 .nav button {
@@ -55,16 +43,11 @@
   display: flex;
   list-style: none;
   gap: 16px;
-  padding: 10px 14px;
+  padding: 0;
   margin: 0;
-  position: absolute;
-  right: calc(100% + 12px);
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid var(--border);
-  background: var(--cream);
-  white-space: nowrap;
-  z-index: 20;
+  margin-left: auto;
+  margin-right: 8px;
+  align-items: center;
 }
 
 .links a {
@@ -85,20 +68,44 @@
 
 @media (max-width: 768px) {
   .nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 14px 16px;
+    gap: 0;
   }
 
-  .topRow {
-    width: 100%;
+  .logo {
+    min-width: 0;
+  }
+
+  .navOpen {
+    gap: 12px;
   }
 
   .links {
-    max-width: min(88vw, 560px);
-    overflow-x: auto;
+    order: 3;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+    row-gap: 10px;
+    justify-content: space-between;
     gap: 10px 14px;
   }
 
   .links a {
     font-size: 0.75rem;
+  }
+
+  .buttonGroup {
+    order: 2;
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .nav button {
+    padding: 7px 10px;
   }
 }
