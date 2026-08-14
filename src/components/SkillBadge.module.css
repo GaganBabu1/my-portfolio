@@ -30,13 +30,14 @@
   justify-content: flex-start;
   gap: 12px;
   width: 100%;
+  min-width: 0;
 }
 
 .badge img,
 .badge svg {
   display: block;
-  width: 160px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   flex: 0 0 40px;
   object-fit: contain;
   filter: brightness(1.02);
