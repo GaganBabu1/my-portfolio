@@ -52,7 +52,7 @@ function About() {
           <div className={styles.actions}>
             <a
               className={styles.primaryLink}
-              href="/resumes/Java%20+%20SpringBoot/Gagan_Babu_Java_SpringBoot_Resume.pdf"
+              href="/resumes/Java%20+%20SpringBoot/Gagan_Babu_Resume_Java.pdf"
               
               
               target="_blank"
@@ -62,7 +62,7 @@ function About() {
             </a>
             <a
               className={styles.primaryLink}
-              href="/resumes/MERN%20Stack/Gagan_Babu_MERN_Resume.pdf"
+              href="/resumes/MERN%20Stack/Gagan_Babu_Resume_MERN.pdf"
               target="_blank"
               rel="noreferrer"
             >
