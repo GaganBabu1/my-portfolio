@@ -213,7 +213,7 @@ function Home() {
                     Currently exploring AI integration in web systems.</p>
                 <div className={styles.actions}>
                     <a className={styles.primaryLink} href="/projects">See selected work</a>
-                    <a className={styles.secondaryLink} href="/contact">Start a conversation</a>
+                    <a className={styles.secondaryLink} href="/Contact">Start a conversation</a>
                 </div>
             </section>
         
