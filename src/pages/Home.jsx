@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import SkillBadge from "../components/SkillBadge";
 //import Clock from "../components/Clock";
 import styles from './Home.module.css';
@@ -212,8 +213,8 @@ function Home() {
                     I've shipped production-ready apps with CI/CD pipelines, AWS deployment, and JWT-secured APIs. 
                     Currently exploring AI integration in web systems.</p>
                 <div className={styles.actions}>
-                    <a className={styles.primaryLink} href="/projects">See selected work</a>
-                    <a className={styles.secondaryLink} href="/Contact">Start a conversation</a>
+                    <Link className={styles.primaryLink} to="/projects">See selected work</Link>
+                    <Link className={styles.secondaryLink} to="/contact">Start a conversation</Link>
                 </div>
             </section>
         
