@@ -6,17 +6,18 @@ const projectGroups = {
     java: [
         {
             id: "java-1",
-            title: "Banking Management System",
-            description: "Full-stack banking application with account management, deposits, withdrawals, and fund transfers. Built with Spring Boot REST APIs, JPA/Hibernate ORM, and a React frontend with concurrent-safe transaction validation.",
-            tech: "Spring Boot, React, MySQL, JPA/Hibernate, GitHub Actions",
+            
+            title: "Intelligent Banking System",
+            description: "Full-stack enterprise banking engine with 4 core transaction workflows, multi-tiered validation rules, and a ₹100,000 daily transfer cap. Built with Spring Boot REST APIs, MySQL/Hibernate ORM, and a React frontend, featuring an explainable 4-heuristic rule-based anomaly detection engine and GitHub Actions CI pipelines.",
+            tech: "Spring Boot, React, MySQL, JPA/Hibernate, Spring Security, GitHub Actions",
             language: "Java",
-            github: "https://github.com/GaganBabu1/Bank"
+            github: "https://github.com/GaganBabu1/Intelligent-Banking-System"
         },
         {
             id: "java-2",
             title: "Journal App",
-            description: "Secure full-stack journal application with JWT authentication, BCrypt encryption, and role-based access control. Auto-deploys to AWS EC2 via GitHub Actions CI/CD pipeline with Docker containerization.",
-            tech: "Spring Boot, MongoDB, React, Docker, AWS",
+            description: "Containerized Java microservice featuring JWT HS512 authentication, BCrypt password hashing, and Spring Security with zero hardcoded credentials. Built with Spring Boot REST APIs, MongoDB, and a React frontend, deployed on AWS EC2 via multi-stage Docker builds with optimized JVM heap tuning.",
+            tech:"Spring Boot, React, MongoDB, Spring Security, Docker, AWS EC2",
             language: "Java",
             liveDemo: "https://journal-app-gold-chi.vercel.app/",
             github: "https://github.com/GaganBabu1/journal-app"
